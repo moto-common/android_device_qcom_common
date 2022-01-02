@@ -27,15 +27,19 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     libgui_vendor \
     libstagefright_softomx.vendor \
     libstagefrighthw
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
+
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/media/android.hardware.media.c2@1.0.xml
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)

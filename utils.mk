@@ -1,4 +1,6 @@
 # vars for use by utils
+empty ?=
+space ?= $(empty) $(empty)
 colon := $(empty):$(empty)
 underscore := $(empty)_$(empty)
 
@@ -95,12 +97,6 @@ endef
 # returns true or empty
 define is-board-platform-in-list
 $(call match-word-in-list,$(TARGET_BOARD_PLATFORM),$(1))
-endef
-
-# $(call is-product-in-list,tpl)
-# # returns true or empty
-define is-product-in-list
-$(call match-word-in-list,$(TARGET_PRODUCT),$(1))
 endef
 
 # $(call is-vendor-board-platform,vendor)

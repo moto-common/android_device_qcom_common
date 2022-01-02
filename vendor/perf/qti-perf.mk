@@ -24,7 +24,10 @@ PRODUCT_COPY_FILES += \
 ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
+else
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.hardware.iop@2.0.xml
 endif
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.hardware.perf@2.2.xml
 
 # Disable the poweropt service for non 5.4 platforms.
 ifneq ($(TARGET_KERNEL_VERSION),5.4)

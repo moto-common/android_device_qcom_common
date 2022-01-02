@@ -1,3 +1,6 @@
+#!/bin/bash
+#
+# Copyright (C) 2018-2019 The LineageOS Project
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,12 +14,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+set -e
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+# Required!
+export COMPONENT=qseecomd
+export VENDOR=qcom/common/vendor
 
-# Common
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
--include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
-endif
+"../setup-makefiles.sh" "$@"
