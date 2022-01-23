@@ -51,9 +51,10 @@ endif
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.power.pasr.enabled=true
+    vendor.power.pasr.enabled=true \
+    ro.vendor.qspm.enable=true
 
-ifeq ($(call is-board-platform-in-list, lahaina),true)
+ifeq ($(call is-board-platform-in-list, kona lahaina),true)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
@@ -61,10 +62,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.beluga.t=0x240
 endif
 
+# Enable active mode PASR
+ifeq ($(TARGET_BOARD_PLATFORM), holi)
+PRODUCT_PROPERTY_OVERRIDES += vendor.pasr.activemode.enabled=false
+else
+PRODUCT_PROPERTY_OVERRIDES += vendor.pasr.activemode.enabled=true
+endif
+
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.perf.scroll_opt=true \
-    vendor.power.pasr.enabled=true
+    ro.vendor.perf.scroll_opt=true
 endif
 
 # Get non-open-source specific aspects
