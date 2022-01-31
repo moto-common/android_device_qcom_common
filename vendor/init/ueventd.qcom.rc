@@ -25,6 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import /vendor/etc/ueventd.rc
+
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
