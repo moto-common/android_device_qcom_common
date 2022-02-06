@@ -13,13 +13,7 @@
 # limitations under the License.
 
 # Inherit from QSSI audio makefile.
-include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/qssi.mk
-
-ifeq ($(call is-board-platform-in-list,sm6150),true)
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/msmsteppe.mk
-else
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
-endif
+include $(TOPDIR)vendor/qcom/opensource/audio/$(qcom_platform)/configs/qssi/qssi.mk
 
 # Override proprietary definitions from SoC audio makefile.
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
