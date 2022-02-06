@@ -16,8 +16,8 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
-include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
+include vendor/qcom/opensource/display-commonsys-intf/config/display-interfaces-product.mk
+include vendor/qcom/opensource/display-commonsys-intf/config/display-product-system.mk
 endif
 
 # Permissions
