@@ -33,3 +33,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
+
+# Filesystem
+TARGET_FS_CONFIG_GEN += device/qcom/common/config.fs
