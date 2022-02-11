@@ -41,10 +41,12 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/lib/libsdsprpc.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
+vendor/lib/libsnsapi.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
+vendor/lib64/libsnsapi.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
