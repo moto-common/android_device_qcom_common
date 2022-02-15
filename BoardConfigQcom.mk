@@ -16,15 +16,6 @@ SOONG_CONFIG_qtidisplay_llvmsa ?= false
 SOONG_CONFIG_qtidisplay_gralloc4 ?= true
 SOONG_CONFIG_qtidisplay_default ?= true
 
-# Add legacy gralloc to soong config namespaces
-SOONG_CONFIG_NAMESPACES += gralloc
-
-# Add use_v1 variable to gralloc config
-SOONG_CONFIG_gralloc := use_v1
-
-# Set default value for gralloc config
-SOONG_CONFIG_gralloc_use_v1 := true
-
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 QCOM_BOARD_PLATFORMS += msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal
