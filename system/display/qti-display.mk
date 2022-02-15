@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # Include display HAL makefiles.
--include hardware/qcom/display/config/display-board.mk
--include hardware/qcom/display/config/display-product.mk
+include vendor/qcom/opensource/display/$(qcom_platform)/config/display-board.mk
+include vendor/qcom/opensource/display/$(qcom_platform)/config/display-product.mk
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/display-commonsys-intf/config/display-interfaces-product.mk
 include vendor/qcom/opensource/display-commonsys-intf/config/display-product-system.mk
