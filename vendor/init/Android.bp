@@ -36,6 +36,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "init.qti.qcv.rc",
+    src: "init.qti.qcv.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
 prebuilt_hidl_interfaces {
     name: "hidl_netperftuner_interface",
     interfaces: [
@@ -106,6 +113,12 @@ sh_binary {
 sh_binary {
     name: "init.qti.kernel.sh",
     src: "init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "init.qti.qcv.sh",
     vendor: true,
 }
 
