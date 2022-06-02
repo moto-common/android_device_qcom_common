@@ -74,5 +74,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true
 endif
 
+# QSPM
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.qspmhal@1.0.xml
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/perf/perf-vendor.mk)
