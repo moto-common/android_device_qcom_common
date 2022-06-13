@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit configuration from the HAL.
-$(call inherit-product-if-exists, hardware/qcom/media/product.mk)
+$(call inherit-product-if-exists, vendor/qcom/opensource/media/$(qcom_platform)/product.mk)
 
 # Media Codecs
 PRODUCT_COPY_FILES += \
