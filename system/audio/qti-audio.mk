@@ -15,6 +15,9 @@
 # Inherit from QSSI audio makefile.
 include $(TOPDIR)vendor/qcom/opensource/audio/$(qcom_platform)/configs/qssi/qssi.mk
 
+# Inherit from platform audio makefile.
+include $(TOPDIR)vendor/qcom/opensource/audio/$(qcom_platform)/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+
 # Override proprietary definitions from SoC audio makefile.
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 
