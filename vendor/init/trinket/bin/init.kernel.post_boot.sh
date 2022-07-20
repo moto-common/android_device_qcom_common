@@ -188,11 +188,11 @@ echo 1305600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 
 # configure governor settings for gold cluster
-echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us
-echo 1401600 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
-echo 1056000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+echo 1401600 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
+echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 
 # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
 echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost
