@@ -51,7 +51,10 @@ PRODUCT_PACKAGES += \
 endif
 
 # IPACM
-$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
+IPACM_DATA := IPACM_cfg.xml
+IPACM_DATA += ipacm
+IPACM_DATA += ipacm.rc
+PRODUCT_PACKAGES += $(IPACM_DATA)
 
 # Include QCOM WLAN makefiles.
 ifeq ($(call is-board-platform-in-list,sdm845),true)
