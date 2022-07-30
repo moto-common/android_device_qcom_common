@@ -51,6 +51,11 @@ PRODUCT_PACKAGES += \
     init.vendor.wlan.rc
 endif
 
+# Enable IEEE 802.11ax support
+ifeq ($(call is-board-platform-in-list, kona lahaina),true)
+CONFIG_IEEE80211AX := true
+endif
+
 # IPACM
 IPACM_DATA := IPACM_cfg.xml
 IPACM_DATA += ipacm
