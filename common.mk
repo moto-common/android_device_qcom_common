@@ -36,3 +36,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem
 TARGET_FS_CONFIG_GEN += device/qcom/common/config.fs
+
+# Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
