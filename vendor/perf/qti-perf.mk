@@ -41,6 +41,9 @@ PRODUCT_PACKAGES += \
     init.aospa.perf.rc \
     libpsi.vendor \
     libtflite \
+    vendor.qti.hardware.perf@2.0.vendor \
+    vendor.qti.hardware.perf@2.1.vendor \
+    vendor.qti.hardware.perf@2.2.vendor \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
