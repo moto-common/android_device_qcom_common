@@ -13,4 +13,4 @@
 # limitations under the License.
 
 # Get non-open-source specific aspects.
-$(call inherit-product, vendor/qcom/common/vendor/display/$(KERNEL_VERSION)/display-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
