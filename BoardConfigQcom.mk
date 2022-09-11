@@ -30,6 +30,4 @@ QCOM_MEDIA_ROOT := vendor/qcom/opensource/media/$(qcom_platform)
 
 OMX_VIDEO_PATH := mm-video-v4l2
 
-TARGET_KERNEL_VERSION := $(KERNEL_VERSION)
-
 include device/qcom/common/utils.mk
