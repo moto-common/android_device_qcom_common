@@ -17,7 +17,7 @@ include $(TOPDIR)vendor/qcom/opensource/audio/$(qcom_platform)/configs/$(TARGET_
 
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
-BOARD_SUPPORTS_OPENSOURCE_STHAL := false
+BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
 # OMX Packages
 PRODUCT_PACKAGES += \
