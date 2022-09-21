@@ -1,4 +1,5 @@
 # Graphics (SDM)
+vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib/libqrtrclient.so
 vendor/lib/libqseed3.so
 vendor/lib/libsdm-color.so
