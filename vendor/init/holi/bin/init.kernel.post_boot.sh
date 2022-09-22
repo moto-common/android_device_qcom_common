@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -106,7 +106,6 @@ function configure_memory_parameters() {
 	echo 1 > /proc/sys/vm/watermark_scale_factor
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 0 > /proc/sys/vm/page-cluster
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
 	echo 2 > /proc/sys/vm/kswapd_threads
@@ -154,27 +153,26 @@ echo 1190400 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 
 # configure governor settings for gold cluster
-echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
-echo 1248000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
-echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
+echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us
+echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us
+echo 1248000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
+echo 768000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
 
 # Colocation V3 settings
 echo 680000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/rtg_boost_freq
 echo 51 > /proc/sys/kernel/sched_min_task_util_for_boost
 echo 35 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
 # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
 echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
 echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
-echo 85 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_load
+echo 85 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_load
 
 # configure input boost settings
 echo "0:1190400" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-echo 1 > /sys/devices/system/cpu/cpu_boost/sched_boost_on_input
 
 # Enable bus-dcvs
 for device in /sys/devices/platform/soc
