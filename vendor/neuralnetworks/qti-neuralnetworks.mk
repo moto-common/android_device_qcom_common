@@ -12,5 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/neuralnetworks/android.hardware.neuralnetworks@1.3-service-qti.xml
+
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.0.vendor \
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.2.vendor \
+    android.hardware.neuralnetworks@1.3.vendor
+
 # Get non-open-source specific aspects.
 $(call inherit-product, vendor/qcom/common/vendor/neuralnetworks/neuralnetworks-vendor.mk)
