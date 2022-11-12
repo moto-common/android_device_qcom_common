@@ -45,7 +45,6 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libsndmonitor \
     libspkrprot \
-    libssrec \
     libtinycompress \
     libvolumelistener \
     sound_trigger.primary.$(TARGET_BOARD_PLATFORM)

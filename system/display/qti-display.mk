@@ -26,7 +26,6 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.qti \
     libqdutils \
     libqservice \
     libtinyxml \

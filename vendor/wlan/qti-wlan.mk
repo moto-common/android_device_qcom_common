@@ -32,17 +32,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    fstman \
-    fstman.ini \
     hostapd \
-    hostapd.accept \
-    hostapd.deny \
     hostapd_cli \
-    hostapd_default.conf \
     libqsap_sdk \
     libwifi-hal-qcom \
     libwpa_client \
-    sigma_dut \
     wpa_supplicant \
     wpa_supplicant.conf
 
@@ -59,7 +53,6 @@ endif
 # IPACM
 IPACM_DATA := IPACM_cfg.xml
 IPACM_DATA += ipacm
-IPACM_DATA += ipacm.rc
 PRODUCT_PACKAGES += $(IPACM_DATA)
 
 # Include QCOM WLAN makefiles.
