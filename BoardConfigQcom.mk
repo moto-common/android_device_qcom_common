@@ -18,13 +18,13 @@ SOONG_CONFIG_qtidisplay_default ?= true
 
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
-QCOM_BOARD_PLATFORMS += msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal
+QCOM_BOARD_PLATFORMS += msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal sm6150
 
 # List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal
+MSM_VIDC_TARGET_LIST := msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal sm6150
 
 # List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal
+MASTER_SIDE_CP_TARGET_LIST := msm8998 sdm660 sdm845 sm6125 sm6350 sm8150 sm8250 sm8350 holi trinket bengal sm6150
 
 QCOM_MEDIA_ROOT := vendor/qcom/opensource/media/$(qcom_platform)
 
