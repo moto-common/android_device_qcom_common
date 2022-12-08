@@ -207,6 +207,8 @@ do
 	do
 		echo "mem_latency" > $memlat/governor
 		cat $memlat/available_frequencies | cut -d " " -f 1 > $memlat/min_freq
+		echo 10 > $memlat/polling_interval
+		echo 400 > $memlat/mem_latency/ratio_ceil
 	done
 
 	#Enable compute governor for gold latfloor
@@ -214,6 +216,7 @@ do
 	do
 		echo "compute" > $latfoor/governor
 		cat $latfloor/available_frequencies | cut -d " " -f 1 > $latfloor/min_freq
+		echo 10 > $latfloor/polling_interval
 	done
 
 	#Gold L3 ratio ceil
@@ -228,6 +231,7 @@ do
 	do
 		echo "mem_latency" > $l3gold/governor
 		cat $l3gold/available_frequencies | cut -d " " -f 1 > $l3gold/min_freq
+		echo 4000 > $l3gold/mem_latency/ratio_ceil
 	done
 done
 
