@@ -12,13 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Packages
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.0.vendor \
-    android.hardware.keymaster@4.1.vendor
-
-DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/keymaster/keymaster-manifest.xml
+DEVICE_MANIFEST_FILE += $(QCOM_COMMON_PATH)/vendor/display/sdm660/sdm-manifest.xml
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/keymaster/keymaster-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/display/sdm660/display-vendor.mk)

@@ -27,4 +27,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
 # Get non-open-source specific aspects.
-$(call inherit-product, vendor/qcom/common/vendor/adreno-legacy/adreno-legacy-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/adreno-sdm660/adreno-sdm660-vendor.mk)

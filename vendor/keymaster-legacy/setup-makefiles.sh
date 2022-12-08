@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +19,7 @@
 set -e
 
 # Required!
-export COMPONENT=adreno-legacy
+export COMPONENT=keymaster-legacy
 export VENDOR=qcom/common/vendor
 
 "../setup-makefiles.sh" "$@"

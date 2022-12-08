@@ -24,7 +24,7 @@ fi
 set -e
 
 # Required!
-export COMPONENT=adreno-legacy
+export COMPONENT=adreno-sdm660
 export VENDOR=qcom/common/vendor
 
 "../extract-files.sh" "$@"
