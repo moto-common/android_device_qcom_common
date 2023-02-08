@@ -33,3 +33,6 @@ OMX_VIDEO_PATH := mm-video-v4l2
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 include device/qcom/common/utils.mk
+
+# SEPolicy
+include device/qcom/common/sepolicy/sepolicy_vndr-legacy/SEPolicy.mk
