@@ -39,4 +39,3 @@ allow vendor_sys_seccam2_app { app_api_service } :service_manager find;
 allow vendor_sys_seccam2_app cameraserver_service:service_manager find;
 
 binder_call(vendor_sys_seccam2_app, gpuservice);
-get_prop(vendor_sys_seccam2_app, vendor_persist_camera_prop)
