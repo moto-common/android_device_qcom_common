@@ -2,9 +2,3 @@ runtime_resource_overlay {
     name: "WifiResTarget_anorak",
     vendor: true,
 }
-
-runtime_resource_overlay {
-    name: "WifiResTargetMainline_anorak",
-    manifest: "AndroidGoogleManifest.xml",
-    vendor: true,
-}
