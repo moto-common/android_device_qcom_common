@@ -34,7 +34,5 @@ endif
 ifeq ($(TARGET_BOARD_PLATFORM),taro)
 PRODUCT_PACKAGES += \
     WifiResTarget_cape \
-    WifiResTarget_ukee \
-    WifiResTargetMainline_cape \
-    WifiResTargetMainline_ukee
+    WifiResTargetMainline_cape
 endif
